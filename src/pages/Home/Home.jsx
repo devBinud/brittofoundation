@@ -146,7 +146,7 @@ const Home = () => {
             {/* Feature 1: Healthcare */}
             <div
               className="role-card glass-card"
-              onClick={() => navigate('/login')}
+              onClick={() => navigate('/healthcare')}
             >
               {/* Ribbon Badge */}
               <div className="card-ribbon">
@@ -167,14 +167,14 @@ const Home = () => {
               </p>
 
               <span className="role-card-link blood-link">
-                Search Donors <ArrowRight size={16} />
+                Explore More <ArrowRight size={16} />
               </span>
             </div>
 
             {/* Feature 2: Education */}
             <div
               className="role-card glass-card"
-              onClick={() => navigate('/login')}
+              onClick={() => navigate('/education')}
             >
               {/* Ribbon Badge */}
               <div className="card-ribbon">
@@ -195,14 +195,14 @@ const Home = () => {
               </p>
 
               <span className="role-card-link education-link">
-                Browse Courses <ArrowRight size={16} />
+                Explore More <ArrowRight size={16} />
               </span>
             </div>
 
             {/* Feature 3: Environment */}
             <div
               className="role-card glass-card"
-              onClick={() => navigate('/login')}
+              onClick={() => navigate('/environment')}
             >
               {/* Ribbon Badge */}
               <div className="card-ribbon">
@@ -223,7 +223,7 @@ const Home = () => {
               </p>
 
               <span className="role-card-link env-link">
-                Report Issue <ArrowRight size={16} />
+                Explore More <ArrowRight size={16} />
               </span>
             </div>
           </div>
