@@ -615,7 +615,11 @@
   z-index: 3;
 }
 
-.dark-mode .floating-badge,
+.dark-mode .floating-badge {
+  background: rgba(17, 24, 39, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
 @media (prefers-color-scheme: dark) {
   :root:not(.light-mode) .floating-badge {
     background: rgba(17, 24, 39, 0.85);
