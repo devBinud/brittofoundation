@@ -30,7 +30,7 @@ const About = () => {
             </div>
             <div className="about-stat-divider" />
             <div className="about-stat-chip">
-              <span className="about-stat-num">2024</span>
+              <span className="about-stat-num">2026</span>
               <span className="about-stat-lbl">Founded in Assam</span>
             </div>
             <div className="about-stat-divider" />
