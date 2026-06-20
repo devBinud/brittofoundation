@@ -1,0 +1,200 @@
+.environment-page {
+  padding: 0;
+  background-color: var(--bg-primary);
+}
+
+.env-hero-container {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  overflow: hidden;
+}
+
+.env-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.env-overlay-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 4.5rem; /* position it overlaying the light sky background */
+  gap: 3rem;
+}
+
+.env-text-block {
+  flex: 1;
+  max-width: 480px;
+  text-align: left;
+}
+
+.env-hero-title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 2.85rem;
+  font-weight: 700;
+  color: #171717; /* Dark text for contrast against light sky */
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  line-height: 1.15;
+}
+
+.env-hero-subtitle {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  color: #404040;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Form overlay styles */
+.env-hero-form {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.25rem;
+  z-index: 2;
+  margin-top: 0.5rem;
+}
+
+.env-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+.env-form-group label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #171717;
+  letter-spacing: 0.08em;
+}
+
+.env-form-group select {
+  padding: 0.85rem 2.5rem 0.85rem 1rem;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid #d4d4d4;
+  border-radius: var(--radius-sm);
+  background-color: #ffffff;
+  color: #171717;
+  outline: none;
+  cursor: pointer;
+  appearance: none; /* remove default browser arrow */
+  min-width: 200px;
+}
+
+/* Custom select arrow wrapper */
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::after {
+  content: '▼';
+  font-size: 0.65rem;
+  color: #737373;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.env-hero-submit {
+  background-color: var(--success); /* #00703c */
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0 1.5rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+  white-space: nowrap;
+  height: 48px; /* match select height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.env-hero-submit:hover {
+  background-color: var(--success-hover);
+}
+
+/* Dark mode compatibility on image overlay */
+.dark-mode .env-hero-title {
+  color: #171717;
+}
+.dark-mode .env-hero-subtitle {
+  color: #404040;
+}
+.dark-mode .env-form-group label {
+  color: #171717;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .env-hero-container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .env-hero-bg {
+    position: relative;
+    height: 400px;
+    order: 2;
+  }
+  
+  .env-overlay-content {
+    position: relative;
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+    gap: 2rem;
+    order: 1;
+  }
+  
+  .env-text-block {
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  .env-hero-title {
+    font-size: 2.25rem;
+  }
+  
+  .env-hero-form {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .env-form-group select {
+    width: 100%;
+  }
+  
+  .env-hero-submit {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .env-hero-title {
+    font-size: 1.85rem;
+  }
+  
+  .env-hero-bg {
+    height: 300px;
+  }
+}

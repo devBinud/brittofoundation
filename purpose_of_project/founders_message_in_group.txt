@@ -1,0 +1,22 @@
+We sincerely apologize for the delay in the development of the *Britto Foundation platform* .
+
+The project has now entered a critical backend development phase where we’re building and testing the core application architecture. This includes designing custom post types, configuring advanced meta queries, establishing dynamic relationships and conditions, setting up custom user roles and permissions, defining user metadata structures, and developing role-based user profiles and dashboards.
+
+We’re also building comprehensive registration workflows for all stakeholder categories — donors, blood requestors, volunteers, doctors, hospitals, and blood banks. Each process is being designed with custom validation logic, profile management, approval workflows, access controls, and dashboard-specific features to ensure the platform is secure, reliable, and built to scale.
+
+In parallel, we’re implementing dynamic content filtering, conditional visibility rules, database optimization, user access management, notification workflows, and automation processes. These will ensure smooth, seamless interaction across all modules of the platform.
+
+Since these components form the foundation of the entire ecosystem, we’re investing extra time in robust architecture, thorough testing, and quality assurance. This approach will help us prevent future performance, security, or scalability challenges and deliver a platform you can rely on long-term.
+
+We truly appreciate your patience and understanding as we complete this phase. Our commitment is to deliver a stable, secure, and professionally engineered platform that will confidently support *Britto Foundation*’s mission and operational needs for years to come.
+
+Regards 
+
+Pranab Milan Gogoi 
+Abhishek Buragohain
+
+
+Tagline for Britton Website
+
+
+1) জীৱন ৰেখাৰ প্ৰতিটো বিন্দুত - বৃত্ত ফাউণ্ডেশ্যন

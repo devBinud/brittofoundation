@@ -1,0 +1,188 @@
+/* ── WIP LOGIN PAGE ─────────────────────── */
+.login-wip-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-primary);
+}
+
+/* Decorative background blobs */
+.wip-blob {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(100px);
+  z-index: 0;
+}
+
+.wip-blob-1 {
+  width: 500px;
+  height: 500px;
+  top: -150px;
+  right: -100px;
+  background: radial-gradient(circle, rgba(var(--primary-rgb), 0.08) 0%, transparent 70%);
+}
+
+.wip-blob-2 {
+  width: 400px;
+  height: 400px;
+  bottom: -100px;
+  left: -100px;
+  background: radial-gradient(circle, rgba(var(--secondary-rgb), 0.06) 0%, transparent 70%);
+}
+
+/* Card */
+.wip-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 480px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 3rem 2.5rem;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+/* Logo */
+.wip-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wip-logo-img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Construction Icon Circle */
+.wip-icon-wrap {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.1), rgba(var(--secondary-rgb), 0.08));
+  border: 1px solid rgba(var(--primary-rgb), 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  animation: wip-pulse 3s ease-in-out infinite;
+}
+
+@keyframes wip-pulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(var(--primary-rgb), 0.15); }
+  50% { transform: scale(1.04); box-shadow: 0 0 0 12px rgba(var(--primary-rgb), 0); }
+}
+
+/* Text */
+.wip-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.wip-title {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.wip-subtitle {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Status pills */
+.wip-status-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+}
+
+.wip-status-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.85rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* Status dots */
+.wip-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.wip-dot-green  { background: #22c55e; box-shadow: 0 0 6px rgba(34,197,94,0.5); }
+.wip-dot-yellow { background: #f59e0b; box-shadow: 0 0 6px rgba(245,158,11,0.5); }
+.wip-dot-red    { background: var(--primary); box-shadow: 0 0 6px rgba(var(--primary-rgb),0.5); }
+
+/* Divider */
+.wip-divider {
+  width: 100%;
+  height: 1px;
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--border) 0px,
+    var(--border) 6px,
+    transparent 6px,
+    transparent 12px
+  );
+  background-color: transparent;
+}
+
+/* Back button */
+.wip-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border);
+  background: transparent;
+  transition: all var(--transition-fast);
+}
+
+.wip-back-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: rgba(var(--primary-rgb), 0.05);
+  transform: translateX(-2px);
+}
+
+@media (max-width: 480px) {
+  .wip-card {
+    padding: 2.25rem 1.75rem;
+  }
+  .wip-title {
+    font-size: 1.5rem;
+  }
+}

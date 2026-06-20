@@ -1,0 +1,143 @@
+.blood-request-panel {
+  text-align: left;
+}
+
+.request-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.request-header-row h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* Request Form Card */
+.request-form-card {
+  padding: 2rem;
+}
+
+.request-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.request-form h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Active Requests */
+.requests-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.request-item-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.request-item-card.fulfilled {
+  opacity: 0.65;
+  border-color: var(--success);
+}
+
+.request-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.request-patient-details {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.request-patient-details h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.card-divider {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 0.75rem 0;
+}
+
+.request-card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  flex: 1;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.detail-item .label {
+  color: var(--text-muted);
+}
+
+.detail-item .val {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.blood-val {
+  color: var(--primary) !important;
+  font-weight: 700 !important;
+  font-size: 0.95rem;
+}
+
+.phone-link {
+  color: var(--info) !important;
+  text-decoration: underline;
+}
+
+.reason-item {
+  margin-top: 0.25rem;
+  align-items: flex-start;
+}
+
+.italic {
+  font-style: italic;
+  color: var(--text-secondary) !important;
+}
+
+.no-requests-msg {
+  padding: 2.5rem;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 1024px) {
+  .requests-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .requests-grid {
+    grid-template-columns: 1fr;
+  }
+}

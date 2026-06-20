@@ -1,0 +1,30 @@
+.hosp-registration-panel {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  text-align: left;
+}
+
+.hosp-registration-panel .panel-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.75rem;
+}
+
+.hosp-registration-panel .panel-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.hosp-registration-panel .panel-icon {
+  color: var(--primary);
+}
+
+@media (max-width: 640px) {
+  .hosp-registration-panel {
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,37 @@
+.inst-registration-panel {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  text-align: left;
+}
+
+.inst-registration-panel .panel-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.75rem;
+}
+
+.inst-registration-panel .panel-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.inst-registration-panel .panel-icon {
+  color: var(--accent);
+}
+
+.success-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0 0 1.5rem 0;
+}
+
+@media (max-width: 640px) {
+  .inst-registration-panel {
+    padding: 1.5rem;
+  }
+}

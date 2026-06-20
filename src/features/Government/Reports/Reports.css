@@ -1,0 +1,148 @@
+.reports-panel {
+  text-align: left;
+}
+
+.reports-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.reports-header-row h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.reports-actions-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.reports-intro {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0 0 1.5rem 0;
+}
+
+/* Filter Card */
+.reports-filter-card {
+  padding: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.filters-row {
+  display: flex;
+  gap: 1.25rem;
+}
+
+/* Results Card */
+.report-output-card {
+  padding: 2rem;
+}
+
+.report-output-card h3 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.25rem;
+}
+
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  text-align: left;
+}
+
+.report-table th, .report-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.report-table th {
+  font-weight: 700;
+  color: var(--text-primary);
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.report-table tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.01);
+}
+
+.bold-cell {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.blood-badge {
+  background-color: rgba(var(--primary-rgb), 0.1);
+  color: var(--primary);
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+}
+
+.points-text {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.no-records-msg {
+  color: var(--text-muted);
+}
+
+/* Print Overrides */
+.print-only-container {
+  display: none;
+}
+
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only-container {
+    display: block !important;
+    padding: 2rem;
+    font-family: sans-serif;
+  }
+  .print-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  .print-table th, .print-table td {
+    border: 1px solid #000000;
+    padding: 8px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .reports-filter-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  .filters-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .reports-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .reports-actions-group {
+    width: 100%;
+  }
+  .reports-actions-group .btn {
+    flex: 1;
+  }
+}

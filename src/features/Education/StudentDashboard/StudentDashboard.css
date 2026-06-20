@@ -1,0 +1,155 @@
+.student-dashboard {
+  text-align: left;
+}
+
+.student-intro-row {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.75rem;
+}
+
+.student-intro-row h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.student-sub {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0.25rem 0 0 0;
+}
+
+/* Layout Split */
+.student-layout {
+  display: flex;
+  gap: 2rem;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.enrolled-courses-card, .badges-card {
+  padding: 2rem;
+}
+
+.enrolled-courses-card h3, .badges-card h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.enrolled-courses-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.enrolled-course-item {
+  padding-bottom: 1.25rem;
+}
+
+.course-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.course-item-header h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.instructor-tag {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0.25rem 0;
+}
+
+/* Course Progress Bar */
+.course-progress-container {
+  width: 100%;
+}
+
+.course-progress-outer {
+  width: 100%;
+  height: 8px;
+  background-color: var(--border);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.course-progress-inner {
+  height: 100%;
+  background-color: var(--secondary);
+  border-radius: var(--radius-full);
+  transition: width 0.3s ease-out;
+}
+
+.completed-tag {
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Badges section */
+.icon-gold {
+  color: var(--accent);
+}
+
+.badges-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.badge-item-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background-color: rgba(0, 0, 0, 0.01);
+}
+
+.badge-item-box.earned {
+  border-color: rgba(var(--secondary-rgb), 0.3);
+  background-color: rgba(var(--secondary-rgb), 0.03);
+}
+
+.badge-item-box.locked {
+  opacity: 0.5;
+}
+
+.badge-icon {
+  font-size: 2rem;
+}
+
+.badge-text-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.badge-text-group h5 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.badge-text-group p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 900px) {
+  .student-layout {
+    flex-direction: column;
+  }
+}

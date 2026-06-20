@@ -1,0 +1,162 @@
+.govt-dashboard {
+  text-align: left;
+}
+
+.govt-intro-row {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.75rem;
+}
+
+.govt-intro-row h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* Metrics Grid */
+.govt-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.govt-metrics-grid .metric-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.statewide-box {
+  background-color: rgba(225, 29, 72, 0.1);
+  color: var(--primary);
+}
+
+.top-inst-box {
+  background-color: rgba(217, 119, 6, 0.1);
+  color: var(--accent);
+}
+
+.hosp-count-box {
+  background-color: rgba(20, 184, 166, 0.1);
+  color: var(--secondary);
+}
+
+/* Analytics Split Layout */
+.govt-analytics-layout {
+  display: flex;
+  gap: 2rem;
+}
+
+.stats-chart-card, .approvals-card {
+  padding: 2rem;
+}
+
+.card-header-icon-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card-header-icon-group h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.icon-blue {
+  color: var(--info);
+}
+
+.icon-orange {
+  color: var(--accent);
+}
+
+/* Chart Styles */
+.bar-chart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.chart-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.85rem;
+}
+
+.chart-label {
+  width: 32px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: right;
+}
+
+.chart-bar-outer {
+  flex: 1;
+  height: 16px;
+  background-color: var(--border);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.chart-bar-inner {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+  border-radius: var(--radius-full);
+  transition: width 1s ease-out;
+}
+
+.chart-value {
+  width: 80px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  text-align: left;
+}
+
+/* Approval Items */
+.approvals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.approval-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.approval-details h5 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.approval-sub {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: 0.15rem;
+}
+
+.no-pending-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+  .govt-analytics-layout {
+    flex-direction: column;
+  }
+  .govt-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}

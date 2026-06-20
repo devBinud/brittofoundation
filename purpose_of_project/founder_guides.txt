@@ -1,0 +1,47 @@
+Community Group / NGO / College / Company / Office / Family Tree / Locality 
+
+Wise 
+
+Registration format
+
+
+
+
+
+*Proposal: Institution-Based Donor Registration*
+
+*What it is:*  
+
+Add one field in the donor registration form: *“I donate as part of:”*  
+Donor selects/titles their group. Example: NGO, College, Company, Family, etc.
+
+*How it works:*  
+1. *Dedicated Field*: Donor writes “Donating with NSS Jorhat College” or “Gogoi Family Tree” or “Tata Steel Unit”.
+2. *Auto Tracking*: System groups all donors by that name/tag automatically.
+3. *Live Dashboard*: Govt/NGO can see at a glance → “NSS Jorhat College: 340 donors. Don Bosco School Alumni: 120 donors. Gogoi Family: 28 donors.”
+
+*Why we should do this:
+
+**Benefit**	**Result**
+**Track Impact**	Know which schools, companies, communities give most blood
+**Healthy Competition**	“Don Bosco vs Jorhat College - who donates more this year?” Youth + orgs participate more
+**Targeted Drives**	If “Tea Garden Workers Union” has low donors, run camp there specifically
+**Recognition**	Govt can felicitate “Top 10 Institutions for Blood Donation” every year. Org pride = more donors
+**Data for Planning**	Blood stock planning becomes easier. We know which institution groups to call first for A- emergency
+
+*Simple Example:*  
+Donor A registers → Selects “Donating via Rotaract Club Jorhat”  
+Donor B registers → Selects “Donating via Rotaract Club Jorhat”  
+System shows: “Rotaract Club Jorhat = 85 registered donors”
+
+*In 1 line:*  
+Tag every donor to their institution/family/group. Count becomes automatic. Respect + competition + better planning, all in one field.
+
+
+
+BELOW IS ALSO PROVIDED BY THE FOUNDER
+The search/filter function will enable automated, group-wise donor reports. 
+
+Using this data, the We (Later Govt )can institute annual prizes for highest-contributing institutions and communities. 
+
+Public recognition will drive sustained participation and motivation.

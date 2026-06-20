@@ -1,0 +1,183 @@
+.hospital-dashboard {
+  text-align: left;
+}
+
+.hosp-intro-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.75rem;
+}
+
+.hosp-intro-row h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.hosp-sub-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.25rem;
+}
+
+/* Metrics Row */
+.hosp-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.hosp-metrics-grid .metric-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.req-box {
+  background-color: rgba(225, 29, 72, 0.1);
+  color: var(--primary);
+}
+
+.check-box {
+  background-color: rgba(22, 163, 74, 0.1);
+  color: var(--success);
+}
+
+.donor-box {
+  background-color: rgba(37, 99, 235, 0.1);
+  color: var(--info);
+}
+
+/* Split Layout cards */
+.hosp-split-layout {
+  display: flex;
+  gap: 2rem;
+}
+
+.requests-card, .donors-match-card {
+  padding: 2rem;
+}
+
+.requests-card h3, .donors-match-card h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.demand-items-list, .donors-match-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.demand-item, .match-donor-item {
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--border);
+}
+
+.border-bottom:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.demand-item-header, .match-donor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.demand-item-header h5 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.demand-item-desc, .match-donor-desc {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.date-tag {
+  color: var(--text-muted);
+  margin-left: auto;
+}
+
+/* Match Donor items */
+.match-donor-header h6 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.blood-badge {
+  background-color: var(--primary);
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+}
+
+.inst-badge {
+  color: var(--text-muted);
+}
+
+.phone-badge a {
+  color: var(--info);
+  text-decoration: underline;
+}
+
+.match-donor-status {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Demand Modal overlay */
+.demand-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(9, 13, 22, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1002;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.demand-modal {
+  width: 100%;
+  max-width: 500px;
+  padding: 2.5rem;
+}
+
+.demand-modal h3 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .hosp-split-layout {
+    flex-direction: column;
+  }
+  .hosp-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}
