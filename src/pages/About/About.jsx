@@ -60,15 +60,45 @@ const About = () => {
           </div>
 
           <div className="founders-text">
-            <p>
-              The Britto Foundation platform has entered a critical development phase where we are refining its core application architecture — including custom workflows, metadata structures, and role-based profiles and dashboards.
-            </p>
-            <p>
-              We are building comprehensive workflows for all stakeholder categories: donors, blood requestors, volunteers, hospitals, and blood banks. Each process is engineered with custom validations, profile approvals, and access controls to ensure the platform is secure, reliable, and built to scale.
-            </p>
-            <p>
-              By implementing dynamic filters, conditional visibility, database optimization, and notification structures, we aim to deliver a stable, professionally engineered platform that confidently supports Britto Foundation's mission and operational needs for years to come.
-            </p>
+           <p>
+  Britto Foundation was created with a simple belief: everyone deserves access to support, opportunities, and a better future, regardless of their circumstances. We believe real change happens when people come together and help one another.
+
+  <br /><br />
+
+  Every day, we see families facing medical emergencies, students looking for opportunities to learn and grow, and communities dealing with environmental challenges. These experiences inspired us to establish Britto Foundation and work toward meaningful solutions that make a lasting difference.
+
+  <br /><br />
+
+  Our work is focused on three core areas: Healthcare, Education, and Environment.
+
+  <br /><br />
+
+  In healthcare, we support initiatives that help connect patients with critical assistance, promote blood donation, and strengthen community networks so help is available when it is needed most.
+
+  <br /><br />
+
+  In education, we aim to provide learning opportunities, encourage personal development, and help individuals gain the knowledge and skills needed to build a brighter future.
+
+  <br /><br />
+
+  In the area of environment, we promote awareness, responsible practices, and community participation to help protect natural resources and create a healthier world for future generations.
+
+  <br /><br />
+
+  Britto Foundation is more than an organization. It is a community of people who believe that positive change is possible through collective effort. Volunteers, donors, supporters, and partners all play an important role in helping us create a meaningful impact.
+
+  <br /><br />
+
+  We dream of a future where no patient faces an emergency alone, where every person has the chance to learn and succeed, and where communities actively contribute to a cleaner, healthier, and more sustainable environment.
+
+  <br /><br />
+
+  This vision guides everything we do. It brings us together and motivates us to keep moving forward.
+
+  <br /><br />
+
+  <strong>Britto Foundation. Connecting Compassion with Action.</strong>
+</p>
           </div>
 
           <div className="founders-sigs">
