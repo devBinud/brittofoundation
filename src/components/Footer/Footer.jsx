@@ -92,14 +92,9 @@ const Footer = () => {
         <div className="districts-row-custom">
           <span className="districts-label-custom">WORK REGIONS</span>
           <div className="districts-list-custom">
-            <span>Guwahati</span>
             <span>Jorhat</span>
-            <span>Majuli</span>
-            <span>Sivasagar</span>
-            <span>Tezpur</span>
             <span>Dibrugarh</span>
-            <span>Silchar</span>
-            <span>Nagaon</span>
+            <span>Guwahati</span>
           </div>
         </div>
 
