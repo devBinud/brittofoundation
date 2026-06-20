@@ -5,7 +5,7 @@ import Button from '../../components/Button/Button';
 import homepageEducation from '../../assets/images/homepage_education.webp';
 import heroHealthcare from '../../assets/images/sliders/britto-registration_hero.png';
 import heroEducation from '../../assets/images/sliders/education.webp';
-import heroEnvironment from '../../assets/images/sliders/environment_image.jpg';
+import heroEnvironment from '../../assets/images/sliders/environment_bg.jpg';
 import './Home.css';
 
 const Home = () => {
