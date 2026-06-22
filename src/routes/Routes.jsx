@@ -58,9 +58,12 @@ const DashboardHomeRedirect = () => {
   }
 };
 
+import ScrollToTop from '../components/ScrollToTop/ScrollToTop';
+
 const AppRoutes = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         {/* Public Visitor Routes */}
         <Route path="/" element={<PublicLayout />}>

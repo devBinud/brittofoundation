@@ -130,7 +130,7 @@ body {
   color: var(--text-secondary);
   line-height: 1.5;
   transition: background-color var(--transition-normal), color var(--transition-normal);
-  overflow-x: hidden;
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
 }
 

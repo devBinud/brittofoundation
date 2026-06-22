@@ -13,10 +13,21 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 10);
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
 
   const handleLogout = () => {
     logout();
@@ -43,7 +54,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`glass-panel navbar${scrolled ? ' navbar-scrolled' : ''}`}>
+    <nav className={`navbar${scrolled ? ' navbar-scrolled' : ''}`}>
       <div className="container navbar-container">
         <Link to="/" className="navbar-logo" onClick={() => setIsOpen(false)}>
           <img src="/logo.png" alt="Britto Foundation" className="navbar-logo-img" />
@@ -103,14 +114,25 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Toggle */}
-        <button className="navbar-toggle" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
+        <button className="navbar-toggle" onClick={() => setIsOpen(true)}>
+          <Menu size={24} />
         </button>
       </div>
 
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="navbar-menu-mobile animate-fade-in">
+      {/* Mobile Menu Overlay & Drawer */}
+      <div className={`mobile-menu-overlay ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(false)}></div>
+      
+      <div className={`mobile-menu-drawer ${isOpen ? 'open' : ''}`}>
+        <div className="mobile-drawer-header">
+          <Link to="/" className="navbar-logo" onClick={() => setIsOpen(false)}>
+            <img src="/logo.png" alt="Britto Foundation" className="navbar-logo-img" />
+          </Link>
+          <button className="close-drawer-btn" onClick={() => setIsOpen(false)}>
+            <X size={24} />
+          </button>
+        </div>
+
+        <div className="mobile-drawer-content">
           <NavLink to="/" className="nav-link-mobile" onClick={() => setIsOpen(false)}>Home</NavLink>
           <NavLink to="/healthcare" className="nav-link-mobile" onClick={() => setIsOpen(false)}>Healthcare</NavLink>
           <NavLink to="/education" className="nav-link-mobile" onClick={() => setIsOpen(false)}>Education</NavLink>
@@ -147,7 +169,7 @@ const Navbar = () => {
                   setIsOpen(false);
                   navigate(getDashboardPath());
                 }}
-                className="w-full justify-center mt-3"
+                className="w-full justify-center mt-4"
               >
                 <LayoutDashboard size={16} /> Dashboard
               </Button>
@@ -158,14 +180,14 @@ const Navbar = () => {
                   setIsOpen(false);
                   handleLogout();
                 }}
-                className="w-full justify-center mt-2"
+                className="w-full justify-center mt-3"
               >
                 <LogOut size={16} /> Sign Out
               </Button>
             </div>
           )}
         </div>
-      )}
+      </div>
     </nav>
   );
 };

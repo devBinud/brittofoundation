@@ -15,11 +15,9 @@
   position: relative;
   padding: 6rem 1.5rem 5rem;
   overflow: hidden;
-  background: linear-gradient(
-    160deg,
-    var(--bg-secondary) 0%,
-    var(--bg-primary) 100%
-  );
+  background: linear-gradient(160deg,
+      var(--bg-secondary) 0%,
+      var(--bg-primary) 100%);
 }
 
 /* Subtle grid noise texture */
@@ -59,7 +57,7 @@
 
 .about-hero-title {
   font-family: var(--font-heading);
-  font-size: clamp(2.6rem, 5vw, 4rem);
+  font-size: clamp(2.2rem, 5vw, 3.25rem);
   font-weight: 900;
   letter-spacing: -0.03em;
   line-height: 1.1;
@@ -136,10 +134,6 @@
   flex-shrink: 0;
 }
 
-/* ─── FOUNDERS CARD ─────────────────────── */
-.founders-section {
-  /* no extra padding — container handles it */
-}
 
 .founders-card {
   position: relative;
@@ -291,15 +285,22 @@
 }
 
 @media (max-width: 768px) {
+  .about-hero-title {
+    font-size: 1.85rem;
+  }
+
   .founders-card {
     padding: 2.5rem 1.75rem;
   }
+
   .founders-sigs {
     gap: 1.5rem;
   }
+
   .about-stats-row {
     padding: 0.75rem 1.25rem;
   }
+
   .about-stat-chip {
     padding: 0 1rem;
   }
@@ -393,16 +394,26 @@
   opacity: 1;
 }
 
-.pillar-blood:hover { border-color: rgba(var(--primary-rgb), 0.3); }
-.pillar-unity:hover { border-color: rgba(217, 119, 6, 0.3); }
-.pillar-govt:hover  { border-color: rgba(var(--secondary-rgb), 0.3); }
+.pillar-blood:hover {
+  border-color: rgba(var(--primary-rgb), 0.3);
+}
+
+.pillar-unity:hover {
+  border-color: rgba(217, 119, 6, 0.3);
+}
+
+.pillar-govt:hover {
+  border-color: rgba(var(--secondary-rgb), 0.3);
+}
 
 .pillar-blood .pillar-card-glow {
   background: radial-gradient(circle at top left, rgba(var(--primary-rgb), 0.06) 0%, transparent 60%);
 }
+
 .pillar-unity .pillar-card-glow {
   background: radial-gradient(circle at top left, rgba(217, 119, 6, 0.06) 0%, transparent 60%);
 }
+
 .pillar-govt .pillar-card-glow {
   background: radial-gradient(circle at top left, rgba(var(--secondary-rgb), 0.06) 0%, transparent 60%);
 }
@@ -423,8 +434,13 @@
   z-index: 0;
 }
 
-.pillar-unity .pillar-number { color: rgba(217, 119, 6, 0.05); }
-.pillar-govt  .pillar-number { color: rgba(var(--secondary-rgb), 0.05); }
+.pillar-unity .pillar-number {
+  color: rgba(217, 119, 6, 0.05);
+}
+
+.pillar-govt .pillar-number {
+  color: rgba(var(--secondary-rgb), 0.05);
+}
 
 /* Icon */
 .pillar-icon-wrap {
@@ -467,7 +483,9 @@
   color: var(--text-primary);
 }
 
-.pillar-card:hover .pillar-watermark { opacity: 0.07; }
+.pillar-card:hover .pillar-watermark {
+  opacity: 0.07;
+}
 
 .pillar-watermark svg {
   width: 130px !important;
@@ -510,14 +528,32 @@
   margin-top: auto;
 }
 
-.pillar-card:hover .pillar-link { color: var(--text-secondary); gap: 0.5rem; }
-.pillar-blood:hover .pillar-link { color: var(--primary); }
-.pillar-unity:hover .pillar-link { color: var(--accent); }
-.pillar-govt:hover  .pillar-link { color: var(--secondary); }
+.pillar-card:hover .pillar-link {
+  color: var(--text-secondary);
+  gap: 0.5rem;
+}
+
+.pillar-blood:hover .pillar-link {
+  color: var(--primary);
+}
+
+.pillar-unity:hover .pillar-link {
+  color: var(--accent);
+}
+
+.pillar-govt:hover .pillar-link {
+  color: var(--secondary);
+}
 
 @media (max-width: 1024px) {
-  .pillars-grid { grid-template-columns: 1fr; gap: 1.25rem; }
-  .pillar-number { font-size: 3.5rem; }
+  .pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .pillar-number {
+    font-size: 3.5rem;
+  }
 }
 
 /* ─── JOURNEY ───────────────────────────── */
@@ -562,9 +598,17 @@
   box-shadow: var(--shadow-lg);
 }
 
-.journey-card-1:hover { border-color: rgba(var(--primary-rgb), 0.25); }
-.journey-card-2:hover { border-color: rgba(217, 119, 6, 0.25); }
-.journey-card-3:hover { border-color: rgba(var(--secondary-rgb), 0.25); }
+.journey-card-1:hover {
+  border-color: rgba(var(--primary-rgb), 0.25);
+}
+
+.journey-card-2:hover {
+  border-color: rgba(217, 119, 6, 0.25);
+}
+
+.journey-card-3:hover {
+  border-color: rgba(var(--secondary-rgb), 0.25);
+}
 
 .journey-phase-badge {
   display: inline-block;
@@ -579,8 +623,15 @@
   background: rgba(var(--primary-rgb), 0.08);
 }
 
-.journey-badge-2 { color: var(--accent);     background: rgba(217, 119, 6, 0.08); }
-.journey-badge-3 { color: var(--secondary);  background: rgba(var(--secondary-rgb), 0.08); }
+.journey-badge-2 {
+  color: var(--accent);
+  background: rgba(217, 119, 6, 0.08);
+}
+
+.journey-badge-3 {
+  color: var(--secondary);
+  background: rgba(var(--secondary-rgb), 0.08);
+}
 
 .journey-card-title {
   font-family: var(--font-heading);
@@ -610,8 +661,13 @@
   letter-spacing: 0.06em;
 }
 
-.journey-tag-2 { color: var(--accent); }
-.journey-tag-3 { color: var(--secondary); }
+.journey-tag-2 {
+  color: var(--accent);
+}
+
+.journey-tag-3 {
+  color: var(--secondary);
+}
 
 /* Connector arrow between cards */
 .journey-connector {
@@ -640,6 +696,7 @@
     grid-template-columns: 1fr;
     gap: 1.25rem;
   }
+
   .journey-connector {
     flex-direction: row;
     padding: 0;

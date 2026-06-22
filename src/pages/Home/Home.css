@@ -34,7 +34,9 @@
 /* Hero Section - Image Slider */
 .hero-section {
   position: relative;
-  height: 720px;
+  height: calc(100vh - 76px);
+  min-height: 540px;
+  max-height: 600px;
   overflow: hidden;
   background-color: #030712;
   width: 100%;
@@ -67,12 +69,10 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    rgba(3, 7, 18, 0.95) 0%,
-    rgba(3, 7, 18, 0.8) 40%,
-    rgba(3, 7, 18, 0.4) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(3, 7, 18, 0.95) 0%,
+      rgba(3, 7, 18, 0.8) 40%,
+      rgba(3, 7, 18, 0.4) 100%);
   z-index: 2;
 }
 
@@ -129,7 +129,7 @@
 }
 
 .hero-slide-content .hero-title {
-  font-size: 4rem;
+  font-size: 3.25rem;
   font-weight: 900;
   letter-spacing: -0.03em;
   line-height: 1.15;
@@ -140,9 +140,9 @@
 }
 
 .hero-slide-content .hero-subtitle {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: rgba(241, 245, 249, 0.9);
-  line-height: 1.7;
+  line-height: 1.6;
   margin: 0;
   max-width: 660px;
   font-weight: 450;
@@ -162,6 +162,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -173,28 +174,26 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.8);
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.4);
+  /* Gray normally */
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   z-index: 5;
-  transition: all var(--transition-normal);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  transition: color var(--transition-normal);
 }
 
 .slider-control-btn:hover {
-  background: rgba(255, 255, 255, 0.12);
+  background: transparent;
   color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.35);
-  transform: translateY(-50%) scale(1.08);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  /* White on hover */
+  transform: translateY(-50%);
+  /* No scaling */
 }
 
 .prev-btn {
@@ -280,14 +279,17 @@
   background-color: rgba(225, 29, 72, 0.1);
   color: var(--primary);
 }
+
 .stat-card:nth-child(2) .stat-icon-wrapper {
   background-color: rgba(0, 111, 187, 0.1);
   color: var(--secondary);
 }
+
 .stat-card:nth-child(3) .stat-icon-wrapper {
   background-color: rgba(217, 119, 6, 0.1);
   color: var(--accent);
 }
+
 .stat-card:nth-child(4) .stat-icon-wrapper {
   background-color: rgba(0, 112, 60, 0.1);
   color: var(--success);
@@ -341,7 +343,7 @@
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 850;
   margin: 0;
   letter-spacing: -0.02em;
@@ -424,14 +426,29 @@
   transform: translateX(4px);
 }
 
-.blood-link { color: #e11d48; }
-.role-card:hover .blood-link { color: #be123c; }
+.blood-link {
+  color: #e11d48;
+}
 
-.education-link { color: #2563eb; }
-.role-card:hover .education-link { color: #1d4ed8; }
+.role-card:hover .blood-link {
+  color: #be123c;
+}
 
-.env-link { color: #16a34a; }
-.role-card:hover .env-link { color: #15803d; }
+.education-link {
+  color: #2563eb;
+}
+
+.role-card:hover .education-link {
+  color: #1d4ed8;
+}
+
+.env-link {
+  color: #16a34a;
+}
+
+.role-card:hover .env-link {
+  color: #15803d;
+}
 
 /* Diagonal Ribbon Badge Styles */
 .card-ribbon {
@@ -463,9 +480,17 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 }
 
-.ribbon-red { background-color: #e11d48; }
-.ribbon-blue { background-color: #2563eb; }
-.ribbon-green { background-color: #16a34a; }
+.ribbon-red {
+  background-color: #e11d48;
+}
+
+.ribbon-blue {
+  background-color: #2563eb;
+}
+
+.ribbon-green {
+  background-color: #16a34a;
+}
 
 /* Watermark Background Styles */
 .card-watermark {
@@ -488,14 +513,23 @@
 }
 
 /* Color watermarks softly to match the themed ribbon */
-.role-card:nth-child(1) .card-watermark { color: #e11d48; }
-.role-card:nth-child(2) .card-watermark { color: #2563eb; }
-.role-card:nth-child(3) .card-watermark { color: #16a34a; }
+.role-card:nth-child(1) .card-watermark {
+  color: #e11d48;
+}
+
+.role-card:nth-child(2) .card-watermark {
+  color: #2563eb;
+}
+
+.role-card:nth-child(3) .card-watermark {
+  color: #16a34a;
+}
 
 /* Dark Mode adaptation */
 .dark-mode .card-watermark {
   opacity: 0.06;
 }
+
 .dark-mode .role-card:hover .card-watermark {
   opacity: 0.09;
 }
@@ -640,9 +674,12 @@
 }
 
 @keyframes floatBadge {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
@@ -743,7 +780,7 @@
 }
 
 .cta-title {
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-weight: 850;
   margin: 0;
   letter-spacing: -0.02em;
@@ -811,12 +848,10 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0) 30%,
-    rgba(255, 255, 255, 0.6) 50%,
-    rgba(255, 255, 255, 0) 70%
-  );
+  background: linear-gradient(120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.6) 50%,
+      rgba(255, 255, 255, 0) 70%);
   transition: all 0.6s ease;
   z-index: 1;
 }
@@ -848,9 +883,11 @@
 .badge-healthcare-btn {
   color: var(--primary);
 }
+
 .badge-healthcare-btn .hero-btn-icon {
   background-color: var(--primary);
 }
+
 .badge-healthcare-btn:hover {
   box-shadow: 0 8px 24px rgba(225, 29, 72, 0.35);
   border-color: rgba(225, 29, 72, 0.5);
@@ -859,9 +896,11 @@
 .badge-education-btn {
   color: var(--secondary);
 }
+
 .badge-education-btn .hero-btn-icon {
   background-color: var(--secondary);
 }
+
 .badge-education-btn:hover {
   box-shadow: 0 8px 24px rgba(0, 111, 187, 0.35);
   border-color: rgba(0, 111, 187, 0.5);
@@ -870,9 +909,11 @@
 .badge-environment-btn {
   color: var(--success);
 }
+
 .badge-environment-btn .hero-btn-icon {
   background-color: var(--success);
 }
+
 .badge-environment-btn:hover {
   box-shadow: 0 8px 24px rgba(0, 112, 60, 0.35);
   border-color: rgba(0, 112, 60, 0.5);
@@ -883,17 +924,21 @@
   .hero-slide-content .hero-title {
     font-size: 3.5rem;
   }
+
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
+
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
   }
+
   .stats-section {
     margin-top: -3rem;
   }
+
   .what-we-do-grid {
     gap: 3rem;
   }
@@ -903,25 +948,31 @@
   .hero-section {
     height: 660px;
   }
+
   .hero-slide-content .hero-title {
     font-size: 3rem;
   }
+
   .what-we-do-grid {
     grid-template-columns: 1fr;
     gap: 4rem;
   }
+
   .what-we-do-image {
     height: 340px;
   }
+
   .cta-container {
-    padding: 3rem;
+    padding: 2rem;
     flex-direction: column;
     text-align: center;
     gap: 2rem;
   }
+
   .cta-content {
     max-width: 100%;
   }
+
   .cta-actions {
     width: 100%;
     display: flex;
@@ -931,47 +982,79 @@
 
 @media (max-width: 768px) {
   .hero-section {
-    height: 600px;
+    height: auto;
+    min-height: 520px !important;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
   }
+
   .hero-slide-content {
-    margin-top: 0;
+    margin-top: -1.75rem; /* Shift content upwards slightly to make room for dots */
+    align-items: center;
+    text-align: center;
   }
+
+  .hero-slide-content .hero-badge {
+    margin-bottom: 1rem;
+    font-size: 0.65rem;
+    padding: 0.4rem 1rem;
+  }
+
   .hero-slide-content .hero-title {
-    font-size: 2.25rem;
+    font-size: 1.85rem;
+    line-height: 1.25;
   }
+
   .hero-slide-content .hero-subtitle {
-    font-size: 1.05rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 0.5rem;
   }
+
+  .slider-dots {
+    bottom: 1.25rem; /* Position dots lower on mobile screens */
+  }
+
   .slider-control-btn {
-    display: none; /* Hide arrows on touch screens */
+    display: none;
+    /* Hide arrows on touch screens */
   }
+
   .stats-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
+
   .stats-section {
     margin-top: -2rem;
     padding: 0 1rem;
   }
+
   .features-grid {
     grid-template-columns: 1fr;
     gap: 1.25rem;
   }
+
   .what-we-do-checklist {
     grid-template-columns: 1fr;
   }
+
   .floating-badge.badge-top {
     right: 0rem;
     top: -1rem;
   }
+
   .floating-badge.badge-bottom {
     left: 0rem;
     bottom: -1rem;
   }
+
   .hero-slide-content .hero-actions {
     flex-direction: column;
     width: 100%;
+    gap: 0.85rem;
   }
+
   .hero-slide-content .hero-actions button {
     width: 100%;
     justify-content: center;
