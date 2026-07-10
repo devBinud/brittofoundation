@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Star, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import './About.css';
 
 const About = () => {
@@ -11,10 +11,6 @@ const About = () => {
       <section className="about-hero">
         <div className="about-hero-noise" />
         <div className="about-hero-inner container">
-          <div className="about-hero-badge">
-            <Star size={12} />
-            <span>Our Story &amp; Mission</span>
-          </div>
           <h1 className="about-hero-title">
             Built on <span className="about-hero-highlight">Purpose</span>,<br />
             Driven by <span className="about-hero-highlight2">People</span>
