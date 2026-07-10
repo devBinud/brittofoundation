@@ -13,11 +13,9 @@
 /* ─── HERO ─────────────────────────────── */
 .about-hero {
   position: relative;
-  padding: 6rem 1.5rem 5rem;
+  padding: 5rem 1.5rem 4rem;
   overflow: hidden;
-  background: linear-gradient(160deg,
-      var(--bg-secondary) 0%,
-      var(--bg-primary) 100%);
+  background: transparent;
 }
 
 /* Subtle grid noise texture */
@@ -37,7 +35,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .about-hero-badge {
@@ -792,21 +790,20 @@
 .about-workflow-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.85rem 2rem;
-  background-color: var(--primary);
-  color: #ffffff !important;
+  gap: 0.5rem;
+  padding: 0.7rem 1.75rem;
+  background: transparent;
+  color: var(--primary) !important;
+  border: 1.5px solid var(--primary);
   border-radius: var(--radius-full);
-  font-weight: 700;
-  font-size: 0.95rem;
+  font-weight: 600;
+  font-size: 0.9rem;
   text-decoration: none;
-  transition: background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
-  box-shadow: var(--shadow-sm);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
   white-space: nowrap;
 }
 
 .about-workflow-btn:hover {
-  background-color: var(--primary-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.25);
+  background-color: var(--primary);
+  color: #ffffff !important;
 }
