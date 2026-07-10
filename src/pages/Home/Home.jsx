@@ -83,9 +83,6 @@ const Home = () => {
             <div className="container hero-slide-container">
               {index === currentSlide && (
                 <div className="hero-slide-content">
-                  <div className={`hero-badge ${slide.badgeClass}`}>
-                    {slide.badge}
-                  </div>
                   <h1 className="hero-title">
                     {slide.title} <br />
                     <span className="text-gradient">{slide.titleSub}</span>

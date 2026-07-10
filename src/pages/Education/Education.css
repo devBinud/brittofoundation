@@ -23,9 +23,9 @@
 }
 
 .edu-page-title {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: var(--font-heading);
   font-size: 2.85rem;
-  font-weight: 700;
+  font-weight: 850;
   color: var(--text-primary);
   margin-top: 0;
   margin-bottom: 1rem;

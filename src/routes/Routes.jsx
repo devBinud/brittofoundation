@@ -17,6 +17,7 @@ import Healthcare from '../pages/Healthcare/Healthcare';
 import HealthcareForm from '../pages/Healthcare/HealthcareForm';
 import Education from '../pages/Education/Education';
 import Environment from '../pages/Environment/Environment';
+import Workflow from '../pages/Workflow/Workflow';
 
 // Feature Dashboards & Workflows
 import DonorRegistration from '../features/BloodDonation/DonorRegistration/DonorRegistration';
@@ -69,6 +70,8 @@ const AppRoutes = () => {
         <Route path="/" element={<PublicLayout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
+          <Route path="workflow" element={<Workflow />} />
+          <Route path="worflow" element={<Workflow />} />
           <Route path="donate" element={<Donate />} />
           <Route path="contact" element={<Contact />} />
           <Route path="login" element={<Login />} />

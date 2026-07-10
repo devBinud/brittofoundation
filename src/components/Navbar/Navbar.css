@@ -5,11 +5,10 @@
   width: 100%;
   z-index: 1000;
   border-radius: 0;
-  border-top: none;
-  border-inline: none;
-  border-bottom: 1px solid var(--border);
+  border: none;
   background-color: var(--bg-secondary);
   padding: 0.75rem 0;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
   transition: box-shadow var(--transition-normal);
 }
 
@@ -18,8 +17,8 @@
   background: var(--bg-secondary) !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08) !important;
-  border-bottom: 1px solid var(--border) !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12) !important;
+  border-bottom: none !important;
 }
 
 .navbar-container {
@@ -288,15 +287,15 @@
 .mobile-drawer-content {
   display: flex;
   flex-direction: column;
-  padding: 1.5rem;
-  gap: 0.5rem;
+  padding: 1.25rem 1rem;
+  gap: 0.2rem;
 }
 
 .nav-link-mobile {
-  font-size: 1.15rem;
-  font-weight: 600;
+  font-size: 0.9rem;
+  font-weight: 500;
   color: var(--text-secondary);
-  padding: 0.85rem 1.25rem;
+  padding: 0.6rem 0.9rem;
   border-radius: var(--radius-md);
   transition: all var(--transition-fast);
   display: block;
@@ -343,9 +342,9 @@
 
 .mobile-user-name {
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   color: var(--text-primary);
-  margin: 0 0 0.25rem 0;
+  margin: 0 0 0.15rem 0;
 }
 
 @media (max-width: 768px) {
@@ -551,8 +550,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 0.5rem 0.5rem 1.25rem;
-  font-size: 1rem;
+  padding: 0.4rem 0.4rem 0.4rem 1rem;
+  font-size: 0.875rem;
   font-weight: 600;
   color: var(--primary);
   border: 1.5px solid var(--primary);

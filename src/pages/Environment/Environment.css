@@ -37,9 +37,9 @@
 }
 
 .env-hero-title {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: var(--font-heading);
   font-size: 2.85rem;
-  font-weight: 700;
+  font-weight: 850;
   color: #171717; /* Dark text for contrast against light sky */
   margin-top: 0;
   margin-bottom: 1.25rem;

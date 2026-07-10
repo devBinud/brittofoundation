@@ -1,0 +1,294 @@
+/* ══════════════════════════════════════════
+   WORKFLOW PAGE — Premium Minimal Layout
+   ══════════════════════════════════════════ */
+
+.workflow-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 6rem;
+  overflow-x: hidden;
+  background-color: var(--bg-primary);
+}
+
+/* ─── HERO BANNER ───────────────────────── */
+.workflow-hero {
+  position: relative;
+  padding: 4.5rem 1.5rem 3.5rem;
+  overflow: hidden;
+  background: linear-gradient(180deg,
+      var(--bg-secondary) 0%,
+      var(--bg-primary) 100%);
+  border-bottom: 1px dashed var(--border);
+  box-shadow: none;
+}
+
+.workflow-hero-noise {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(var(--primary-rgb), 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(var(--secondary-rgb), 0.03) 0%, transparent 45%);
+  pointer-events: none;
+}
+
+.workflow-hero-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.workflow-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.9rem;
+  background: rgba(var(--primary-rgb), 0.05);
+  border: 1px solid rgba(var(--primary-rgb), 0.12);
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.workflow-badge .sparkle-icon {
+  animation: rotateSparkle 3s infinite linear;
+}
+
+@keyframes rotateSparkle {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+.workflow-hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 850;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.workflow-hero-highlight {
+  color: var(--primary);
+}
+
+.workflow-hero-sub {
+  max-width: 600px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ─── GRID CONTAINER ─────────────────────── */
+.workflow-container {
+  margin-top: 1rem;
+}
+
+.workflow-layout-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* ─── LEFT PANEL ────────────────────────── */
+.workflow-left-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.step-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.step-tag {
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.step-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.step-status {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-left: 0.5rem;
+}
+
+.step-description {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ─── INTERACTIVE TIMELINE JOURNEY ──────── */
+.workflow-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.timeline-track {
+  position: absolute;
+  left: 7px; /* Centers with the 16px marker/milestone */
+  top: 10px;
+  bottom: 12px;
+  width: 2px;
+  background: var(--primary);
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.timeline-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+/* Category Milestone Header */
+.timeline-milestone {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.milestone-dot-outer {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.milestone-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background-color: var(--primary);
+}
+
+.category-header {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin: 0;
+  color: var(--primary);
+}
+
+/* Nodes List */
+.timeline-nodes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0;
+  margin: 0;
+}
+
+/* Node Item Wrapper */
+.timeline-node-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+}
+
+.timeline-node-marker {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  z-index: 2;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.node-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: var(--radius-full);
+  background: var(--primary);
+  opacity: 0.6;
+}
+
+/* Node Content Box */
+.timeline-node-content {
+  flex-grow: 1;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  padding: 0.1rem 0.25rem;
+}
+
+.node-name {
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-right: 0.35rem;
+}
+
+.node-desc {
+  color: var(--text-secondary);
+}
+
+/* ─── CENTERING STACK ───────────────────── */
+.workflow-steps-stack {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ─── RESPONSIVE LAYOUTS ────────────────── */
+@media (min-width: 768px) {
+  .actions-card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .workflow-hero {
+    padding: 3.5rem 1rem 2rem;
+  }
+}

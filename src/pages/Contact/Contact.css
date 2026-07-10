@@ -77,10 +77,7 @@
 }
 
 .contact-highlight {
-  background: linear-gradient(135deg, var(--primary), #ff6b8a);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--primary);
 }
 
 .contact-hero-sub {
@@ -415,7 +412,7 @@
   font-weight: 700;
   font-family: var(--font-sans);
   color: #fff;
-  background: linear-gradient(135deg, var(--primary), #ff5577);
+  background: var(--primary);
   border: none;
   border-radius: 10px;
   cursor: pointer;
