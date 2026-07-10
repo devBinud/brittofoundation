@@ -382,7 +382,7 @@ const Workflow = () => {
   ];
 
   return (
-    <div className="workflow-page animate-fade-in">
+    <div className="workflow-page">
       {/* ── COMPACT HERO SECTION ── */}
       <section className="workflow-hero">
         <div className="workflow-hero-noise" />
